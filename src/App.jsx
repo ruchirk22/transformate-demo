@@ -37,8 +37,8 @@ const Header = ({ onLogoClick }) => (
             className="flex items-center gap-3 cursor-pointer"
             onClick={onLogoClick}
         >
-            <Bot className="w-8 h-8 text-[#38dece]" />
-            <h1 className="text-2xl font-bold text-slate-800">Transfor<span className="text-[#38dece]">Mate</span></h1>
+            <Bot className="w-8 h-8 text-[#40c1ac]" />
+            <h1 className="text-2xl font-bold text-slate-800">Transfor<span className="text-[#40c1ac]">Mate</span></h1>
         </div>
         {/* The user did not provide the Calfus logo, so it's commented out. */}
         <img src="/calfus-logo.svg" alt="Calfus Logo" className="h-8 object-contain" />
@@ -51,7 +51,7 @@ const CustomSelect = ({ label, value, onChange, options, placeholder }) => (
         <select
             value={value}
             onChange={e => onChange(e.target.value)}
-            className="w-full p-3 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#38dece] focus:border-[#38dece] transition"
+            className="w-full p-3 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#40c1ac] focus:border-[#40c1ac] transition"
         >
             <option value="" disabled>{placeholder}</option>
             {options.map(opt => <option key={opt} value={opt}>{opt}</option>)}
@@ -63,7 +63,7 @@ const PrimaryButton = ({ children, onClick, disabled = false, className = '' }) 
     <button
         onClick={onClick}
         disabled={disabled}
-        className={`inline-flex items-center justify-center gap-2 bg-[#38dece] text-black font-bold py-3 px-4 rounded-lg hover:bg-[#2dc4b3] transition-all duration-300 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-slate-500 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#38dece] ${className}`}
+        className={`inline-flex items-center justify-center gap-2 bg-[#40c1ac] text-black font-bold py-3 px-4 rounded-lg hover:bg-[#2dc4b3] transition-all duration-300 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-slate-500 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#40c1ac] ${className}`}
     >
         {children}
     </button>
@@ -73,7 +73,7 @@ const SecondaryButton = ({ children, onClick, disabled = false, className = '' }
     <button
         onClick={onClick}
         disabled={disabled}
-        className={`flex items-center justify-center gap-2 bg-white text-black font-bold py-3 px-4 rounded-lg border border-slate-300 hover:bg-slate-50 transition-all duration-300 disabled:bg-slate-200 disabled:cursor-not-allowed shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#38dece] ${className}`}
+        className={`flex items-center justify-center gap-2 bg-white text-black font-bold py-3 px-4 rounded-lg border border-slate-300 hover:bg-slate-50 transition-all duration-300 disabled:bg-slate-200 disabled:cursor-not-allowed shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#40c1ac] ${className}`}
     >
         {children}
     </button>
@@ -81,10 +81,10 @@ const SecondaryButton = ({ children, onClick, disabled = false, className = '' }
 
 const AILoader = ({ text }) => (
     <div className="flex flex-col items-center justify-center gap-4 text-center p-8">
-        <Bot className="w-16 h-16 text-[#38dece] animate-[spin_3s_linear_infinite]" />
+        <Bot className="w-16 h-16 text-[#40c1ac] animate-[spin_3s_linear_infinite]" />
         <p className="text-lg font-medium text-black">{text}</p>
         <div className="w-48 h-2 bg-slate-200 rounded-full overflow-hidden">
-            <div className="h-full bg-[#38dece] rounded-full animate-[loading_2s_ease-in-out_infinite]"></div>
+            <div className="h-full bg-[#40c1ac] rounded-full animate-[loading_2s_ease-in-out_infinite]"></div>
         </div>
     </div>
 );
@@ -166,7 +166,7 @@ const MappingLines = ({ mappings, isEditing, containerRef }) => {
                 <path
                     key={line.id}
                     d={line.path}
-                    stroke={isEditing ? 'rgba(239, 68, 68, 0.8)' : '#38dece'}
+                    stroke={isEditing ? 'rgba(239, 68, 68, 0.8)' : '#40c1ac'}
                     strokeWidth="2"
                     fill="none"
                     strokeDasharray={isEditing ? '5 5' : 'none'}
@@ -183,10 +183,10 @@ const MappingLines = ({ mappings, isEditing, containerRef }) => {
 
 const HomeScreen = ({ setScreen }) => {
     const processSteps = [
-        { icon: <UploadCloud className="w-10 h-10 text-[#38dece]"/>, title: "Upload Data", description: "Start by uploading your raw data file in CSV or Excel format." },
-        { icon: <Cpu className="w-10 h-10 text-[#38dece]"/>, title: "AI-Powered Mapping", description: "Our AI intelligently suggests mappings between your source and Oracle FBDI target columns." },
-        { icon: <Send className="w-10 h-10 text-[#38dece]"/>, title: "Automated Import", description: "TransforMate handles the complex process of loading your data into Oracle Fusion." },
-        { icon: <FileText className="w-10 h-10 text-[#38dece]"/>, title: "Reconciliation", description: "Generate a detailed reconciliation report to verify the import process was successful." },
+        { icon: <UploadCloud className="w-10 h-10 text-[#40c1ac]"/>, title: "Upload Data", description: "Start by uploading your raw data file in CSV or Excel format." },
+        { icon: <Cpu className="w-10 h-10 text-[#40c1ac]"/>, title: "AI-Powered Mapping", description: "Our AI intelligently suggests mappings between your source and Oracle FBDI target columns." },
+        { icon: <Send className="w-10 h-10 text-[#40c1ac]"/>, title: "Automated Import", description: "TransforMate handles the complex process of loading your data into Oracle Fusion." },
+        { icon: <FileText className="w-10 h-10 text-[#40c1ac]"/>, title: "Reconciliation", description: "Generate a detailed reconciliation report to verify the import process was successful." },
     ];
 
     return (
@@ -280,7 +280,7 @@ const UploadScreen = ({ setConfig, setScreen }) => {
                         onDragEnter={handleDragEvents}
                         onDragOver={handleDragEvents}
                         onDragLeave={handleDragEvents}
-                        className={`p-6 border-2 border-dashed rounded-lg text-center cursor-pointer transition-colors ${isDragging ? 'border-[#38dece] bg-teal-50' : 'border-slate-300 bg-slate-50 hover:border-[#38dece]'}`}
+                        className={`p-6 border-2 border-dashed rounded-lg text-center cursor-pointer transition-colors ${isDragging ? 'border-[#40c1ac] bg-teal-50' : 'border-slate-300 bg-slate-50 hover:border-[#40c1ac]'}`}
                     >
                         <input type="file" id="file-upload" className="hidden" onChange={handleFileChange} accept=".csv,.xlsx,.xls" />
                         <label htmlFor="file-upload" className="cursor-pointer">

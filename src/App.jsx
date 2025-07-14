@@ -530,7 +530,7 @@ export default function App() {
         if (screen === 'mapping-loading') {
             const timer = setTimeout(() => {
                 setScreen('mapping');
-            }, 6500); // Simulate AI thinking time
+            }, 8500); // Simulate AI thinking time
             return () => clearTimeout(timer);
         }
     }, [screen]);

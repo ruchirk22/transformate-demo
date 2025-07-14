@@ -8,7 +8,7 @@ const RECON_REPORT_CSV_BASE64 = "UEsDBBQABgAIAAAAIQA9LUTLhwEAAPAFAAATAAgCW0NvbnR
 
 // --- CONFIGURATION CONSTANTS ---
 const FBDI_TEMPLATES = [
-    "Import AutoInvoice", "Billing Data Import", "Budgetary Control Budget Import", "Cash Management Bank Statement Data Import", "Cash Management Cash Position Data Import", "Cash Management External Transactions Import", "Import Units of Production", "Import and Calculate Daily Rates", "Receivables Bank Returns Data Upload Interface", "Receivables Standard Receipt Import", "Revenue Basis Data Import", "Supplier Bank Account Import", "Tax Entry Repository Data Upload Interface", "Blanket Purchase Agreements", "Contract Purchase Agreements", "Purchase Orders", "Requisitions", "Supplier Addresses", "Supplier Attachments", "Supplier Business Classifications", "Supplier Contacts", "Supplier Products & Services Categories", "Supplier Site Assignments", "Supplier Sites", "Suppliers (Master Data)"
+    "Import Receivables Invoices", "Blanket Purchase Agreements", "Contract Purchase Agreements", "Purchase Orders", "Requisitions", "Supplier Addresses", "Supplier Attachments", "AP Invoices", "Supplier Contacts", "Customer Information"
 ];
 
 const PROJECTS = [

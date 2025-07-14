@@ -12,7 +12,7 @@ const FBDI_TEMPLATES = [
 ];
 
 const PROJECTS = [
-    "Beacon – Cash Management Implementation", "Catalyst – Financials Implementation", "Edge – Shared Service Finance Implementation", "Nucleus – SCM Implementation", "Splice – Manufacturing Integration"
+    "Beacon – Cash Management Implementation", "Catalyst – Accounts Receivable Implementation", "Edge – Shared Service Finance Implementation", "Nucleus – SCM Implementation", "Splice – Manufacturing Integration"
 ];
 
 const INSTANCES = ["Dev", "FP1", "FP2", "UAT", "PROD"];

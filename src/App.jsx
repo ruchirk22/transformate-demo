@@ -8,7 +8,7 @@ const RECON_REPORT_CSV_BASE64 = "UEsDBBQABgAIAAAAIQA9LUTLhwEAAPAFAAATAAgCW0NvbnR
 
 // --- CONFIGURATION CONSTANTS ---
 const FBDI_TEMPLATES = [
-    "Import Receivables Invoices", "Blanket Purchase Agreements", "Contract Purchase Agreements", "Purchase Orders", "Requisitions", "Supplier Addresses", "Supplier Attachments", "AP Invoices", "Supplier Contacts", "Customer Information"
+    "Import AutoInvoice", "Blanket Purchase Agreements", "Contract Purchase Agreements", "Purchase Orders", "Requisitions", "Supplier Addresses", "Supplier Attachments", "AP Invoices", "Supplier Contacts", "Customer Information"
 ];
 
 const PROJECTS = [

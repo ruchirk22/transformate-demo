@@ -341,7 +341,9 @@ const MappingScreen = ({ setScreen }) => {
     const handleImport = () => {
         const link = document.createElement('a');
         link.href = `data:application/zip;base64,${FBDI_ZIP_BASE64}`;
-        link.download = 'Generated_FBDI.zip';
+        const now = new Date();
+        const timestamp = now.toISOString().replace(/[-:.]/g, '').replace('T', '_').slice(0, 15);
+        link.download = `Customer_Invoice_Generated_FBDI_${timestamp}.zip`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -442,15 +444,15 @@ const ImportStatusScreen = ({ setScreen }) => {
     useEffect(() => {
         const runSimulation = async () => {
             for (const status of ucmStatuses) {
-                await new Promise(res => setTimeout(res, 1000));
+                await new Promise(res => setTimeout(res, 5000));
                 setStatuses(s => ({ ...s, ucm: status }));
             }
             for (const status of loadStatuses) {
-                await new Promise(res => setTimeout(res, 1000));
+                await new Promise(res => setTimeout(res, 7000));
                 setStatuses(s => ({ ...s, load: status }));
             }
             for (const status of importStatuses) {
-                await new Promise(res => setTimeout(res, 1200));
+                await new Promise(res => setTimeout(res, 12000));
                 setStatuses(s => ({ ...s, import: status }));
             }
             setReportStatus('Enabled');
@@ -465,16 +467,19 @@ const ImportStatusScreen = ({ setScreen }) => {
         }
 
         setReportStatus('Generating...');
-        await new Promise(res => setTimeout(res, 1000));
+        await new Promise(res => setTimeout(res, 4000));
         setReportStatus('Getting custom Report from Fusion');
-        await new Promise(res => setTimeout(res, 1500));
+        await new Promise(res => setTimeout(res, 5500));
         setReportStatus('Generating Reconciliation Report');
-        await new Promise(res => setTimeout(res, 1500));
+        await new Promise(res => setTimeout(res, 6500));
         setReportStatus('Reconciliation Report Generated');
         
+        const now = new Date();
         const link = document.createElement('a');
         link.href = `data:text/csv;base64,${RECON_REPORT_CSV_BASE64}`;
-        link.download = 'Reconciliation_Report.csv';
+        const timestamp = now.toISOString().replace(/[-:.]/g, '').replace('T', '_').slice(0, 15);
+        link.download = `Reconciliation_Report_${timestamp}.csv`;
+        link.download = `Import_AutoInvoice_Recon_Report_${timestamp}.csv`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -507,7 +512,7 @@ const ImportStatusScreen = ({ setScreen }) => {
                         </div>
                     )}
                     <PrimaryButton onClick={handleGenerateReport} disabled={!allSucceeded && reportStatus !== 'Completed'}>
-                        {reportStatus === 'Completed' ? 'Start Over' : 'Generate Reconciliation Report'}
+                        {reportStatus === 'Completed' ? 'Done' : 'Generate Reconciliation Report'}
                         {reportStatus === 'Enabled' ? <Download className="w-5 h-5" /> : (reportStatus !== 'Completed' && <Loader className={`w-5 h-5 ${reportStatus !== 'Enabled' ? 'animate-spin' : 'hidden'}`} />)}
                     </PrimaryButton>
                 </div>
@@ -525,7 +530,7 @@ export default function App() {
         if (screen === 'mapping-loading') {
             const timer = setTimeout(() => {
                 setScreen('mapping');
-            }, 2500); // Simulate AI thinking time
+            }, 6500); // Simulate AI thinking time
             return () => clearTimeout(timer);
         }
     }, [screen]);

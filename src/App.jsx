@@ -15,7 +15,7 @@ const PROJECTS = [
     "Beacon – Cash Management Implementation", "Catalyst – Financials Implementation", "Edge – Shared Service Finance Implementation", "Nucleus – SCM Implementation", "Splice – Manufacturing Integration"
 ];
 
-const INSTANCES = ["SIT", "UAT", "FP1", "FP2", "PROD"];
+const INSTANCES = ["Dev", "FP1", "FP2", "UAT", "PROD"];
 
 const SOURCE_COLUMNS = [
     { id: 'sc-1', name: 'Business Unit' }, { id: 'sc-2', name: 'Transaction Source' }, { id: 'sc-3', name: 'Transaction Type' }, { id: 'sc-4', name: 'Transaction Date' }, { id: 'sc-5', name: 'Accounting Date' }, { id: 'sc-6', name: 'Transaction Number' }, { id: 'sc-7', name: 'Original System Bill-to Customer Reference' }, { id: 'sc-8', name: 'Original System Bill-to Customer Site Reference' }, { id: 'sc-9', name: 'Transaction Currency' }, { id: 'sc-10', name: 'Currency Conversion Type' }, { id: 'sc-11', name: 'Currency Conversion Date' }, { id: 'sc-12', name: 'Currency Conversion Rate' }, { id: 'sc-13', name: 'Invoice Lines/Description' }, { id: 'sc-14', name: 'Invoice Lines/Quantity' }, { id: 'sc-15', name: 'Invoice Lines/Unit Selling Price' }, { id: 'sc-16', name: 'Invoice Lines/Sales Order' }, { id: 'sc-17', name: 'Invoice Lines/Sales Order Date' }, { id: 'sc-18', name: 'Invoice Lines/Tax Classification Code' }, { id: 'sc-19', name: 'Payment Terms' },
